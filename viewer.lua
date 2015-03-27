@@ -3,8 +3,8 @@ if not IsAddOnLoaded("FreeUI") and not IsAddOnLoaded("Aurora") then return end
 local F, C = unpack(Aurora or FreeUI)
 local _, ns = ...
 
-local restyleSingleLineTemplate = ns.restyleSingleLineTemplate
-local restyleMultiLineTemplate = ns.restyleMultiLineTemplate
+local restyleViewerSingleLineTemplate = ns.restyleViewerSingleLineTemplate
+local restyleViewerMultiLineTemplate = ns.restyleViewerMultiLineTemplate
 
 F.AddPlugin(function()
 	local XRPViewer = XRPViewer
@@ -42,21 +42,21 @@ F.AddPlugin(function()
 
 	local Appearance = XRPViewer.Appearance
 
-	restyleSingleLineTemplate(Appearance.RA)
-	restyleSingleLineTemplate(Appearance.RC)
-	restyleSingleLineTemplate(Appearance.AH)
-	restyleSingleLineTemplate(Appearance.AE)
-	restyleSingleLineTemplate(Appearance.AW)
-	restyleMultiLineTemplate(Appearance.CU)
-	restyleMultiLineTemplate(Appearance.DE)
+	restyleViewerSingleLineTemplate(Appearance.RA)
+	restyleViewerSingleLineTemplate(Appearance.RC)
+	restyleViewerSingleLineTemplate(Appearance.AH)
+	restyleViewerSingleLineTemplate(Appearance.AE)
+	restyleViewerSingleLineTemplate(Appearance.AW)
+	restyleViewerMultiLineTemplate(Appearance.CU)
+	restyleViewerMultiLineTemplate(Appearance.DE)
 
 	-- [[ Biography ]]
 
 	local Biography = XRPViewer.Biography
 
-	restyleSingleLineTemplate(Biography.HH)
-	restyleSingleLineTemplate(Biography.AG)
-	restyleSingleLineTemplate(Biography.HB)
-	restyleMultiLineTemplate(Biography.MO)
-	restyleMultiLineTemplate(Biography.HI)
+	restyleViewerSingleLineTemplate(Biography.HH)
+	restyleViewerSingleLineTemplate(Biography.AG)
+	restyleViewerSingleLineTemplate(Biography.HB)
+	restyleViewerMultiLineTemplate(Biography.MO)
+	restyleViewerMultiLineTemplate(Biography.HI)
 end)
