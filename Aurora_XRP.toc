@@ -1,0 +1,14 @@
+## Interface: 60000
+## Title: Aurora_XRP
+## Notes: XRP plugin for Aurora and FreeUI.
+## Author: Haleth/Lightsword
+## Version: 0.1
+## RequiredDeps: xrp
+## OptionalDeps: FreeUI
+
+core.lua
+
+bookmarks.lua
+editor.lua
+options.lua
+viewer.lua
