@@ -66,3 +66,10 @@ ns.restyleEditorDropDownTemplate = function(dropdown)
 	dropdown.Label:ClearAllPoints()
 	dropdown.Label:SetPoint("BOTTOMLEFT", dropdown, "TOPLEFT", 18, -4)
 end
+
+-- [[ Options ]]
+
+ns.restyleOptionsDropDownTemplate = function(dropdown)
+	F.ReskinDropDown(dropdown)
+	dropdown:SetWidth(167)
+end
