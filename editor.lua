@@ -16,26 +16,31 @@ F.AddPlugin(function()
 	restyleDropDownTemplate(XRPEditor.Profiles)
 
 	F.Reskin(XRPEditor.Parent)
-	F.Reskin(XRPEditor.SaveButton)
-	F.Reskin(XRPEditor.RevertButton)
+	F.Reskin(XRPEditor.Save)
+	F.Reskin(XRPEditor.Revert)
 
 	XRPEditorHelpButton.Ring:Hide()
 	XRPEditorHelpButton:ClearAllPoints()
 	XRPEditorHelpButton:SetPoint("TOPLEFT", XRPEditor, "TOPLEFT", -10, 10)
 
+	-- [[ Menu button ]]
+
+	local Menu = XRPEditor.Menu
+
+	F.Reskin(XRPEditor.Menu)
+
+	Menu:SetSize(17, 17)
+	Menu:ClearAllPoints()
+	Menu:SetPoint("RIGHT", XRPEditor.CloseButton, "LEFT", -1, 0)
+
 	-- [[ Profile buttons ]]
 
-	for _, button in pairs({XRPEditor.PlusProfile, XRPEditor.MinusProfile, XRPEditor.RenameProfile, XRPEditor.CopyProfile, XRPEditor.ExportProfile}) do
+	for _, button in pairs({XRPEditor.Plus, XRPEditor.Minus, XRPEditor.Rename, XRPEditor.Copy, XRPEditor.Export}) do
 		F.Reskin(button)
 		button:SetSize(20, 20)
 	end
 
-	XRPEditor.MinusProfile:SetPoint("LEFT", XRPEditor.PlusProfile, "RIGHT", 1, 0)
-	XRPEditor.RenameProfile:SetPoint("LEFT", XRPEditor.MinusProfile, "RIGHT", 1, 0)
-	XRPEditor.CopyProfile:SetPoint("LEFT", XRPEditor.RenameProfile, "RIGHT", 1, 0)
-	XRPEditor.ExportProfile:SetPoint("LEFT", XRPEditor.CopyProfile, "RIGHT", 1, 0)
-
-	F.Reskin(XRPEditor.AutoButton)
+	XRPEditor.Minus:SetPoint("LEFT", XRPEditor.Plus, "RIGHT", 1, 0)
 
 	-- [[ Tabs ]]
 

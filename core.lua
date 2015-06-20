@@ -6,8 +6,8 @@ local _, ns = ...
 ns.restyleDropDownTemplate = function(dropdown)
 	F.ReskinDropDown(dropdown)
 
-	dropdown.MenuText:ClearAllPoints()
-	dropdown.MenuText:SetPoint("RIGHT", -42, 2)
+	dropdown.Text:ClearAllPoints()
+	dropdown.Text:SetPoint("RIGHT", -42, 2)
 end
 
 -- [[ Viewer ]]
