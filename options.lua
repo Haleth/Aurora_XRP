@@ -28,10 +28,23 @@ F.AddPlugin(function()
 		F.ReskinCheck(XRPGeneral.MenusStandard)
 		F.ReskinCheck(XRPGeneral.MenusUnits)
 		F.ReskinCheck(XRPGeneral.MenusUnits)
-		restyleOptionsDropDownTemplate(XRPGeneral.Height)
-		restyleOptionsDropDownTemplate(XRPGeneral.Weight)
 		F.ReskinCheck(XRPGeneral.MinimapEnabled)
 		F.ReskinCheck(XRPGeneral.MinimapDetached)
+
+		-- [[ Display ]]
+
+		local XRPDisplay = InterfaceOptionsFramePanelContainer.XRPDisplay
+
+		restyleOptionsDropDownTemplate(XRPDisplay.Height)
+		restyleOptionsDropDownTemplate(XRPDisplay.Weight)
+		F.ReskinCheck(XRPDisplay.AltBloodElf)
+		F.ReskinCheck(XRPDisplay.AltBloodElfForce)
+		F.ReskinCheck(XRPDisplay.AltNightElf)
+		F.ReskinCheck(XRPDisplay.AltNightElfForce)
+		F.ReskinCheck(XRPDisplay.AltScourge)
+		F.ReskinCheck(XRPDisplay.AltScourgeForce)
+		F.ReskinCheck(XRPDisplay.AltTauren)
+		F.ReskinCheck(XRPDisplay.AltTaurenForce)
 
 		-- [[ Chat ]]
 
