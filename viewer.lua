@@ -38,6 +38,27 @@ F.AddPlugin(function()
 	Menu:ClearAllPoints()
 	Menu:SetPoint("RIGHT", XRPViewer.CloseButton, "LEFT", -1, 0)
 
+	-- [[ Notes button ]]
+
+	do
+		local notesButton = XRPViewer.NotesButton
+		local name = notesButton:GetName()
+
+		F.Reskin(notesButton)
+		notesButton:SetSize(17, 17)
+
+		_G[name.."TopLeft"]:Hide()
+		_G[name.."TopRight"]:Hide()
+		_G[name.."MiddleLeft"]:Hide()
+		_G[name.."MiddleRight"]:Hide()
+		_G[name.."BottomLeft"]:Hide()
+		_G[name.."BottomRight"]:Hide()
+
+		notesButton.Icon:Hide()
+		notesButton.MainIcon:ClearAllPoints()
+		notesButton.MainIcon:SetPoint("CENTER", 1, 0)
+	end
+
 	-- [[ Appearance ]]
 
 	local Appearance = XRPViewer.Appearance

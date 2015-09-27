@@ -23,24 +23,42 @@ F.AddPlugin(function()
 	XRPEditorHelpButton:ClearAllPoints()
 	XRPEditorHelpButton:SetPoint("TOPLEFT", XRPEditor, "TOPLEFT", -10, 10)
 
-	-- [[ Menu button ]]
-
-	local Menu = XRPEditor.Menu
-
-	F.Reskin(XRPEditor.Menu)
-
-	Menu:SetSize(17, 17)
-	Menu:ClearAllPoints()
-	Menu:SetPoint("RIGHT", XRPEditor.CloseButton, "LEFT", -1, 0)
-
 	-- [[ Profile buttons ]]
 
-	for _, button in pairs({XRPEditor.Plus, XRPEditor.Minus, XRPEditor.Rename, XRPEditor.Copy, XRPEditor.Export}) do
+	for _, button in pairs({XRPEditor.Plus, XRPEditor.Minus, XRPEditor.R, XRPEditor.C, XRPEditor.E}) do
 		F.Reskin(button)
 		button:SetSize(20, 20)
 	end
 
 	XRPEditor.Minus:SetPoint("LEFT", XRPEditor.Plus, "RIGHT", 1, 0)
+	XRPEditor.R:SetPoint("LEFT", XRPEditor.Minus, "RIGHT", 1, 0)
+	XRPEditor.C:SetPoint("LEFT", XRPEditor.R, "RIGHT", 1, 0)
+	XRPEditor.E:SetPoint("LEFT", XRPEditor.C, "RIGHT", 1, 0)
+
+	-- [[ Automation / Notes button ]]
+
+	for _, button in pairs({XRPEditor.AutomationButton, XRPEditor.NotesButton}) do
+		local name = button:GetName()
+
+		F.Reskin(button)
+		button:SetSize(17, 17)
+
+		_G[name.."TopLeft"]:Hide()
+		_G[name.."TopRight"]:Hide()
+		_G[name.."MiddleLeft"]:Hide()
+		_G[name.."MiddleRight"]:Hide()
+		_G[name.."BottomLeft"]:Hide()
+		_G[name.."BottomRight"]:Hide()
+
+		button.Icon:Hide()
+		button.MainIcon:ClearAllPoints()
+		button.MainIcon:SetPoint("CENTER")
+	end
+
+	XRPEditor.AutomationButton:ClearAllPoints()
+	XRPEditor.AutomationButton:SetPoint("BOTTOM", XRPEditor.NotesButton, "TOP", 0, 1)
+
+	XRPEditor.NotesButton.MainIcon:SetPoint("CENTER", 2, -1)
 
 	-- [[ Tabs ]]
 
