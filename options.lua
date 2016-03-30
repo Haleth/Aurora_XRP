@@ -12,8 +12,6 @@ F.AddPlugin(function()
 
 		local InterfaceOptionsFramePanelContainer = InterfaceOptionsFramePanelContainer
 
-		F.Reskin(InterfaceOptionsFramePanelContainer.XRP.CacheClear)
-
 		-- [[ General ]]
 
 		local XRPGeneral = InterfaceOptionsFramePanelContainer.XRPGeneral
@@ -51,14 +49,14 @@ F.AddPlugin(function()
 		local XRPChat = InterfaceOptionsFramePanelContainer.XRPChat
 
 		F.ReskinCheck(XRPChat.RPNames)
-		F.ReskinCheck(XRPChat.CHAT_MSG_SAY)
-		F.ReskinCheck(XRPChat.CHAT_MSG_EMOTE)
-		F.ReskinCheck(XRPChat.CHAT_MSG_YELL)
-		F.ReskinCheck(XRPChat.CHAT_MSG_WHISPER)
-		F.ReskinCheck(XRPChat.CHAT_MSG_GUILD)
-		F.ReskinCheck(XRPChat.CHAT_MSG_PARTY)
-		F.ReskinCheck(XRPChat.CHAT_MSG_RAID)
-		F.ReskinCheck(XRPChat.CHAT_MSG_INSTANCE_CHAT)
+		F.ReskinCheck(XRPChat.SAY)
+		F.ReskinCheck(XRPChat.EMOTE)
+		F.ReskinCheck(XRPChat.YELL)
+		F.ReskinCheck(XRPChat.WHISPER)
+		F.ReskinCheck(XRPChat.GUILD)
+		F.ReskinCheck(XRPChat.PARTY)
+		F.ReskinCheck(XRPChat.RAID)
+		F.ReskinCheck(XRPChat.INSTANCE_CHAT)
 		restyleOptionsDropDownTemplate(XRPChat.Channels)
 		F.ReskinCheck(XRPChat.EmoteBraced)
 		F.ReskinCheck(XRPChat.Replacements)
