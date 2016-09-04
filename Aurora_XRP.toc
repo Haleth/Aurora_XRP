@@ -1,4 +1,4 @@
-## Interface: 60100
+## Interface: 70000
 ## Title: Aurora_XRP
 ## Notes: XRP plugin for Aurora and FreeUI.
 ## Author: Haleth/Lightsword
