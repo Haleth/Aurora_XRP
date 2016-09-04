@@ -19,9 +19,9 @@ F.AddPlugin(function()
 	F.Reskin(XRPEditor.Save)
 	F.Reskin(XRPEditor.Revert)
 
-	XRPEditorHelpButton.Ring:Hide()
-	XRPEditorHelpButton:ClearAllPoints()
-	XRPEditorHelpButton:SetPoint("TOPLEFT", XRPEditor, "TOPLEFT", -10, 10)
+	XRPEditor.HelpButton.Ring:Hide()
+	XRPEditor.HelpButton:ClearAllPoints()
+	XRPEditor.HelpButton:SetPoint("TOPLEFT", XRPEditor, "TOPLEFT", -10, 10)
 
 	-- [[ Profile buttons ]]
 
@@ -43,12 +43,9 @@ F.AddPlugin(function()
 		F.Reskin(button)
 		button:SetSize(17, 17)
 
-		_G[name.."TopLeft"]:Hide()
-		_G[name.."TopRight"]:Hide()
-		_G[name.."MiddleLeft"]:Hide()
-		_G[name.."MiddleRight"]:Hide()
-		_G[name.."BottomLeft"]:Hide()
-		_G[name.."BottomRight"]:Hide()
+		for i = 1, 7 do
+			select(i, button:GetRegions()):Hide()
+		end
 
 		button.Icon:Hide()
 		button.MainIcon:ClearAllPoints()

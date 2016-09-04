@@ -47,12 +47,9 @@ F.AddPlugin(function()
 		F.Reskin(notesButton)
 		notesButton:SetSize(17, 17)
 
-		_G[name.."TopLeft"]:Hide()
-		_G[name.."TopRight"]:Hide()
-		_G[name.."MiddleLeft"]:Hide()
-		_G[name.."MiddleRight"]:Hide()
-		_G[name.."BottomLeft"]:Hide()
-		_G[name.."BottomRight"]:Hide()
+		for i = 1, 7 do
+			select(i, notesButton:GetRegions()):Hide()
+		end
 
 		notesButton.Icon:Hide()
 		notesButton.MainIcon:ClearAllPoints()
